@@ -13,6 +13,7 @@ class Book(models.Model):
     author = models.CharField(max_length=200)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     date_publication = models.DateField(blank=False, null=False)
+    cover = models.ImageField(upload_to='covers/', blank=True)
 
     def _str_(self):
         return self.title
